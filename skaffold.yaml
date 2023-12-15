@@ -6,10 +6,10 @@ profiles:
   - name: local
     build:
       googleCloudBuild:
-        projectId: accelerator-services
+        projectId: accelerator-shared-0c2a
         gradleImage: gradle:8.2.1-jdk17-alpine
       artifacts:
-        - image: us-east4-docker.pkg.dev/accelerator-services/application/accelerator-work-manager
+        - image: us-east4-docker.pkg.dev/accelerator-shared-0c2a/application/accelerator-work-manager
           jib:
             type: gradle
             project: service
@@ -23,8 +23,8 @@ profiles:
           chartPath: helm/work-manager
           # Ref: https://skaffold.dev/docs/deployers/helm/#sanitizing-the-artifact-name-from-invalid-go-template-characters
           setValueTemplates:
-            image.repository: "{{.IMAGE_REPO_us_east4_docker_pkg_dev_accelerator_services_application_accelerator_work_manager}}"
-            image.tag: "{{.IMAGE_TAG_us_east4_docker_pkg_dev_accelerator_services_application_accelerator_work_manager}}@{{.IMAGE_DIGEST_us_east4_docker_pkg_dev_accelerator_services_application_accelerator_work_manager}}"
+            image.repository: "{{.IMAGE_REPO_us_east4_docker_pkg_dev_accelerator_shared_0c2a_application_accelerator_work_manager}}"
+            image.tag: "{{.IMAGE_TAG_us_east4_docker_pkg_dev_accelerator_shared_0c2a_application_accelerator_work_manager}}@{{.IMAGE_DIGEST_us_east4_docker_pkg_dev_accelerator_shared_0c2a_application_accelerator_work_manager}}"
           setValues:
             environment: local
           valuesFiles:
@@ -76,10 +76,10 @@ profiles:
   - name: dev
     build:
       googleCloudBuild:
-        projectId: accelerator-services
+        projectId: accelerator-shared-0c2a
         gradleImage: gradle:8.2.1-jdk17-alpine
       artifacts:
-        - image: us-east4-docker.pkg.dev/accelerator-services/application/accelerator-work-manager
+        - image: us-east4-docker.pkg.dev/accelerator-shared-0c2a/application/accelerator-work-manager
           jib:
             type: gradle
             project: service
@@ -93,8 +93,8 @@ profiles:
           chartPath: helm/work-manager
           # Ref: https://skaffold.dev/docs/deployers/helm/#sanitizing-the-artifact-name-from-invalid-go-template-characters
           setValueTemplates:
-            image.repository: "{{.IMAGE_REPO_us_east4_docker_pkg_dev_accelerator_services_application_accelerator_work_manager}}"
-            image.tag: "{{.IMAGE_TAG_us_east4_docker_pkg_dev_accelerator_services_application_accelerator_work_manager}}@{{.IMAGE_DIGEST_us_east4_docker_pkg_dev_accelerator_services_application_accelerator_work_manager}}"
+            image.repository: "{{.IMAGE_REPO_us_east4_docker_pkg_dev_accelerator_shared_0c2a_application_accelerator_work_manager}}"
+            image.tag: "{{.IMAGE_TAG_us_east4_docker_pkg_dev_accelerator_shared_0c2a_application_accelerator_work_manager}}@{{.IMAGE_DIGEST_us_east4_docker_pkg_dev_accelerator_shared_0c2a_application_accelerator_work_manager}}"
           setValues:
             environment: dev
           valuesFiles:

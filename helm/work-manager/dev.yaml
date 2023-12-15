@@ -9,11 +9,11 @@ env:
   ALLOWED_ORIGINS: "http://localhost:4200, http://localhost:4201, https://api-dev.accelerator.dsgov.demo.nuvalence.io, https://agency-dev.accelerator.dsgov.demo.nuvalence.io, https://public-dev.accelerator.dsgov.demo.nuvalence.io, https://employer-dev.accelerator.dsgov.demo.nuvalence.io"
   CERBOS_URI: "127.0.0.1:3592"
   DB_CONNECTION_URL: "jdbc:postgresql://127.0.0.1:5432/accelerator-dev-work-manager-db"
-  DB_USERNAME: "${sm://projects/accelerator-dev/secrets/accelerator-dev-db-user/versions/latest}"
-  DB_PASSWORD: "${sm://projects/accelerator-dev/secrets/accelerator-dev-db-pass/versions/latest}"
-  GCP_PROJECT_ID: "accelerator-dev"
-  SELF_SIGN_PUBLIC_KEY: "${sm://projects/accelerator-dev/secrets/accelerator-self-signed-token-public-key/versions/latest}"
-  SELF_SIGN_PRIVATE_KEY: "${sm://projects/accelerator-dev/secrets/accelerator-self-signed-token-private-key/versions/latest}"
+  DB_USERNAME: "${sm://projects/accelerator-dev-b6f2/secrets/accelerator-dev-db-user/versions/latest}"
+  DB_PASSWORD: "${sm://projects/accelerator-dev-b6f2/secrets/accelerator-dev-db-pass/versions/latest}"
+  GCP_PROJECT_ID: "accelerator-dev-b6f2"
+  SELF_SIGN_PUBLIC_KEY: "${sm://projects/accelerator-dev-b6f2/secrets/accelerator-self-signed-token-public-key/versions/latest}"
+  SELF_SIGN_PRIVATE_KEY: "${sm://projects/accelerator-dev-b6f2/secrets/accelerator-self-signed-token-private-key/versions/latest}"
   USER_MANAGEMENT_BASE_URL: "http://accelerator-user-management/um"
   TOKEN_PRIVATE_KEY_SECRET: "accelerator-self-signed-token-private-key"
   TOKEN_ISSUER: "accelerator"
@@ -23,4 +23,4 @@ env:
   PUBSUB_EMULATOR_HOST: false # set actual "host:port" to enable or false to disable
   PUBSUB_EMULATOR_ENABLED: false # set to true to enable emulator
   # accelerator-events publisher topics separated by comma
-  PUBLISHER_TOPICS: projects/accelerator-dev/topics/DOCUMENT_PROCESSING_INITIATION,projects/accelerator-dev/topics/APPLICATION_ROLE_REPORTING,projects/accelerator-dev/topics/NOTIFICATION_REQUESTS,projects/accelerator-dev/topics/AUDIT_EVENTS_RECORDING
+  PUBLISHER_TOPICS: projects/accelerator-dev-b6f2/topics/DOCUMENT_PROCESSING_INITIATION,projects/accelerator-dev-b6f2/topics/APPLICATION_ROLE_REPORTING,projects/accelerator-dev-b6f2/topics/NOTIFICATION_REQUESTS,projects/accelerator-dev-b6f2/topics/AUDIT_EVENTS_RECORDING
